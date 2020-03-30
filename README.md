@@ -9,3 +9,5 @@ Ruby script to parse json from slack emoji list
 6. Download the script into the same directory
 7. Run script like this: `ruby download_emojis.rb NUMBER_OF_FILES_CREATED` Note: `NUMBER_OF_FILES_CREATED` should be replaced with however many files you created. It defaults to 10.
 8. The files will be created in an `emojis` folder with the name of the emoji as the file name.
+
+If you want to bulk import, [this should work](https://manychat.com/blog/quick-tip-how-to-bulk-upload-custom-slack-emojis/).
