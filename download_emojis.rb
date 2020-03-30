@@ -12,7 +12,10 @@ number = Integer(ARGV[0]) || 10
       url = emoji["url"]
       file_type = url.split(".").last
       file_name = emoji["name"] + "." + file_type
-      next if File.file?("emojis/#{file_name}")
+      if File.file?("emojis/#{file_name}")
+        puts "skipping #{file_name}, url: #{url}"
+        next
+      end
       puts "writing #{file_name}"
       File.write "emojis/#{file_name}", open(url).read
     rescue
